@@ -3,9 +3,9 @@
 // @name           Under-Field Throw Range
 // @author         abeerslayer
 // @category       Layer
-// @version        0.2.3
-// @downloadURL    
-// @updateURL      
+// @version        1.0.0
+// @downloadURL    https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
+// @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
 // @description    Shows under field throw range at 500m
 // @match          *://intel.ingress.com/*
 // @match          *://*.ingress.com/mission/*
