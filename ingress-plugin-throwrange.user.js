@@ -1,15 +1,15 @@
 // ==UserScript==
-// @id             underfieldthrowrange
-// @name           Under-Field Throw Range
-// @author         abeerslayer
-// @category       Layer
-// @version        1.1.0
-// @downloadURL    https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
-// @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
-// @description    Shows under field throw range at 500m
-// @match          *://intel.ingress.com/*
-// @match          *://*.ingress.com/mission/*
-// @grant          none
+// @id underfieldthrowrange
+// @name IITC Plugin: Under-Field Throw Range
+// @author abeerslayer
+// @category Layer
+// @version 1.1.1
+// @downloadURL https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
+// @updateURL https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
+// @description Shows under field throw range at 500m
+// @match *://intel.ingress.com/*
+// @match *://*.ingress.com/mission/*
+// @grant none
 // ==/UserScript==
 
 
@@ -67,8 +67,7 @@ function wrapper(plugin_info) {
     const defaultSettings = {
         circleColor: "#800080",
         circleWidth: 2,
-        circleRange: 500,
-        showAllResoCircle: false
+        circleRange: 500
     };
 
     let settings = defaultSettings;
@@ -92,9 +91,6 @@ function wrapper(plugin_info) {
         }
         if (!settings.circleRange) {
             settings.circleRange = 500;
-        }
-        if (!"showAllResoCircle" in settings) {
-            settings.showAllResoCircle = false
         }
     }
 
@@ -178,17 +174,10 @@ function wrapper(plugin_info) {
             saveSettings();
         });
 
-        const textCircleRange = div.querySelector("#textCircleRange");
-        textCircleRange.value = settings.circleRange;
-        textCircleRange.addEventListener("change", (e) => {
-            settings.circleRange = textCircleRange.value;
-            saveSettings();
-        });
-
-        const showAllCB = div.querySelector("#cbShowAllResoCircle");
-        showAllCB.checked = settings.showAllResoCircle;
-        showAllCB.addEventListener("change", (e) => {
-            settings.showAllResoCircle = showAllCB.checked;
+        const textCircleRangeStr = div.querySelector("#textCircleRange");
+        textCircleRangeStr.value = settings.circleRange;
+        textCircleRangeStr.addEventListener("change", (e) => {
+            settings.circleRange = textCircleRangeStr.value;
             saveSettings();
         });
     };
@@ -204,7 +193,9 @@ function wrapper(plugin_info) {
                 p = window.portals[guid.selectedPortalGuid];
                 if (p) {
                     const coord = new LatLng(p._latlng.lat, p._latlng.lng);
-                    portalFieldThrowrangeIndicator = L.circle(coord, settings.circleRange,
+                    console.log("[UFTR] ", settings.circleRange);
+                    console.log("[UFTR] ", Number(settings.circleRange));
+                    portalFieldThrowrangeIndicator = L.circle(coord, Number(settings.circleRange),
                         { fill: false, color: settings.circleColor, weight: settings.circleWidth, interactive: false }
                     )
                     dFieldThrowrangeLayerGroup.addLayer(portalFieldThrowrangeIndicator);
@@ -235,8 +226,8 @@ function wrapper(plugin_info) {
         }
 
         const zoom = map.getZoom();
-
-        if (zoom > 8) {
+        console.log("[UFTR] ", zoom);
+        if (zoom > 2) {
             if (!FieldThrowrangeLayer.hasLayer(dFieldThrowrangeLayerGroup)) {
                 FieldThrowrangeLayer.addLayer(dFieldThrowrangeLayerGroup);
             }
