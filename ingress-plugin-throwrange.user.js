@@ -3,7 +3,7 @@
 // @name IITC Plugin: Under-Field Throw Range
 // @author abeerslayer
 // @category Layer
-// @version 1.1.1
+// @version 1.1.2
 // @downloadURL https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
 // @updateURL https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
 // @description Shows under field throw range at 500m
@@ -146,7 +146,7 @@ function wrapper(plugin_info) {
         const html =
             `<p><label for="colorCircleColor">Radius Circle Color</label><br><input type="color" id="colorCircleColor" /></p>
                    <p><label for="textCircleWidth">Radius Circle Thickness</label><br><input type="text" id="textCircleWidth" /></p>
-                   <p><label for="textCircleRange">Throw Range KM</label><br><input type="text" id="textCircleRange" /></p>
+                   <p><label for="textCircleRange">Throw Range in Meters</label><br><input type="text" id="textCircleRange" /></p>
                    <a onclick="window.resetSettings();return false;" title="Restores settings to default state">Reset to Defaults</a>
                   `;
 
