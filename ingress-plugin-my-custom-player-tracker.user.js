@@ -1,11 +1,11 @@
 // ==UserScript==
-// @id             iitc-plugin-custom-player-tracker
-// @name           IITC plugin: Custom Player Tracker
+// @id             iitc-plugin-custom-player-tracker-2
+// @name           IITC plugin: Custom Player Tracker 2.0
 // @category       Layer
-// @version        0.3.7
+// @version        2.0.0
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://dair-data.s3.amazonaws.com/custom-player-tracker.user.js
-// @downloadURL    https://dair-data.s3.amazonaws.com/custom-player-tracker.user.js
+// @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-my-custom-player-tracker.user.js
+// @downloadURL    https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-my-custom-player-tracker.user.js
 // @description    Draw trails for the path a user took and other information (created/destroyed/virused links, resos, and fielding MU) onto the map based on status messages in COMMs.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
@@ -945,7 +945,7 @@ function wrapper(plugin_info) {
                 // popup for marker
                 var cssClass = playerData.team === 'RESISTANCE' ? 'res' : 'enl';
                 var popup = '<span class="nickname '+cssClass+'" style="font-weight:bold;">' + playerData.nick + '</span>';
-                popup += '<br><a href="https://link.ingress.com/?link=https://intel.ingress.com/agent/' + playerData.nick + '">DIR LINK</a>'
+                popup += '<br><a href="https://link.ingress.com/?link=https://intel.ingress.com/agent/' + playerData.nick + '">Player Profile</a>'
 
                 if(window.plugin.guessPlayerLevels !== undefined &&
                    window.plugin.guessPlayerLevels.fetchLevelDetailsByPlayer !== undefined) {
