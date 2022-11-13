@@ -20,7 +20,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
 plugin_info.dateTimeVersion = '20221113.000000';
-plugin_info.pluginId = 'portal-highlighter-portals-my-level';
+plugin_info.pluginId = 'portal-highlighter-red-portals';
 //END PLUGIN AUTHORS NOTE
 
 
