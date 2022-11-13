@@ -4,9 +4,9 @@
 // @category       Highlighter
 // @version        0.0.0.1
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://static.iitc.me/build/release/plugins/portal-highlighter-portals-my-level.meta.js
-// @downloadURL    https://static.iitc.me/build/release/plugins/portal-highlighter-portals-my-level.user.js
-// @description    [iitc-2017-01-08-021732] Use the portal fill color to denote if the portal is either at and above, or at and below your level.
+// @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-highlight-red.user.js
+// @downloadURL    https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-highlight-red.user.js
+// @description    Highlight Red Faction Portals
 // @match          https://*.ingress.com/*
 // @grant          none
 // ==/UserScript==
