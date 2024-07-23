@@ -2,11 +2,11 @@
 // @author         blsmit5728
 // @name           Hide portals that are linked or fielded.
 // @category       Highlighter
-// @version        0.1
+// @version        0.9
 // @description    Hides any portal that has a link or field from it.
 // @id             boner-unlinked-highlighter@blsmit5728
-// @updateURL      https://raw.githubusercontent.com/IITC-CE/Community-plugins/master/dist/Perringaiden/wolf-linked-highlighter.meta.js
-// @downloadURL    https://raw.githubusercontent.com/IITC-CE/Community-plugins/master/dist/Perringaiden/wolf-linked-highlighter.user.js
+// @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/hide-linked-portals.user.js
+// @downloadURL    https://github.com/blsmit5728/iitc_plugins/raw/main/hide-linked-portals.user.js
 // @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
