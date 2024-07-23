@@ -32,8 +32,6 @@ function wrapper(plugin_info) {
         var health = d.health;
         var guid = data.portal.options.ent[0];
 
-        console.log("[Hider]:Zoom", window.plugin.bonerunlinked.zoomLevelHasPortals())
-        console.log("[Hider]:cond", conditional(guid))
         if (conditional(guid) == false && window.plugin.bonerunlinked.zoomLevelHasPortals()) {
             // Hide any portal that meets the conditions.
             var style = {};
@@ -66,7 +64,7 @@ function wrapper(plugin_info) {
                 out_links = true;
             }
             console.log("inout: ", in_links, out_links)
-            return in_links && out_links
+            return (in_links || out_links)
         }
         return true
     }
