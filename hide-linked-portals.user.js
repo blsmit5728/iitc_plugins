@@ -2,7 +2,7 @@
 // @author         blsmit5728
 // @name           Hide portals that are linked or fielded.
 // @category       Highlighter
-// @version        0.91
+// @version        69.420
 // @description    Hides any portal that has a link or field from it.
 // @id             boner-unlinked-highlighter@blsmit5728
 // @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/hide-linked-portals.user.js
@@ -53,18 +53,25 @@ function wrapper(plugin_info) {
 
         if (linkGuids != undefined) {
             //return ((linkGuids.in != undefined && linkGuids.in.length > 0) || (linkGuids.out != undefined && linkGuids.out.length > 0));
-            if( linkGuids.in == undefined && linkGuids.in.length == 0){
+            if( linkGuids.in.length == 0 || linkGuids.in == undefined ){
                 in_links = false
             } else {
                 in_links = true
             }
-            if( linkGuids.out != undefined && linkGuids.out.length > 0){
+            if( linkGuids.out.length == 0 || linkGuids.out == undefined){
                 out_links = false;
             } else {
                 out_links = true;
             }
-            console.log("inout: ", in_links, out_links)
-            return (in_links || out_links)
+            console.log("inout: ", in_links, out_links, guid)
+            if( !in_links && !out_links )
+            {
+                console.log("true for ", guid)
+                return true
+            } else {
+                console.log("false for ", guid)
+                return false
+            }
         }
         return true
     }
