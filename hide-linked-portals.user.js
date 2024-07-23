@@ -2,7 +2,7 @@
 // @author         blsmit5728
 // @name           Hide portals that are linked or fielded.
 // @category       Highlighter
-// @version        0.9
+// @version        0.91
 // @description    Hides any portal that has a link or field from it.
 // @id             boner-unlinked-highlighter@blsmit5728
 // @updateURL      https://github.com/blsmit5728/iitc_plugins/raw/main/hide-linked-portals.user.js
