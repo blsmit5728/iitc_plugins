@@ -3,7 +3,7 @@
 // @name IITC Plugin: Under-Field Throw Range
 // @author abeerslayer
 // @category Layer
-// @version 1.1.1
+// @version 1.2.0
 // @downloadURL https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
 // @updateURL https://github.com/blsmit5728/iitc_plugins/raw/main/ingress-plugin-throwrange.user.js
 // @description Shows under field throw range at 500m
@@ -67,7 +67,7 @@ function wrapper(plugin_info) {
     const defaultSettings = {
         circleColor: "#800080",
         circleWidth: 2,
-        circleRange: 500
+        circleRange: 2000
     };
 
     let settings = defaultSettings;
@@ -90,7 +90,7 @@ function wrapper(plugin_info) {
             settings.circleWidth = "2";
         }
         if (!settings.circleRange) {
-            settings.circleRange = 500;
+            settings.circleRange = 2000;
         }
     }
 
